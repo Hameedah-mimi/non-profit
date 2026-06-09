@@ -1,0 +1,14 @@
+.carousel-wrapper {
+  height: 80vh;
+  position: relative;
+}
+
+.header-images {
+  height: 80vh;
+  object-fit: cover;
+}
+
+.header-button {
+  background-color: #778299;
+  border: none;
+}

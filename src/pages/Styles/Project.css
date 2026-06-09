@@ -1,0 +1,133 @@
+.projects-wrapper {
+  background: #f9fafb;
+  font-family: "Poppins", sans-serif;
+  color: #111827;
+}
+
+.projects-page .vill-section {
+  position: relative;
+  min-height: 80vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.projects-page .overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.55));
+}
+
+.baner-content {
+  position: relative;
+  z-index: 2;
+  max-width: 850px;
+}
+
+.baner-content h1 {
+  font-size: 4rem;
+  font-weight: 800;
+  color: white;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.baner-content p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.projects-section {
+  padding: 100px 0;
+  background: linear-gradient(135deg, #ffffff 0%, #f3f4f6 100%);
+}
+
+.project-card {
+  background: white;
+  border-radius: 28px;
+  padding: 20px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.07);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 42px rgba(0, 0, 0, 0.12);
+}
+
+.project-card h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 16px;
+}
+
+.project-card h5 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #404955;
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+
+.project-card p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #374151;
+}
+
+.project-card ul {
+  padding-left: 22px;
+  margin-top: 10px;
+}
+
+.project-card li {
+  margin-bottom: 10px;
+  color: #4b5563;
+  font-size: 1rem;
+}
+
+.project-card .btn-dark {
+  background: #111827;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 50px;
+  font-weight: 600;
+  margin-top: 15px;
+}
+
+.project-card .btn-dark:hover {
+  background: #404955;
+}
+
+.projects-section .row {
+  margin-bottom: 50px;
+}
+.project-btn {
+  background: #111827;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 50px;
+  font-weight: 600;
+  color: white;
+}
+
+.project-btn:hover {
+  background: #404955;
+}
+@media (max-width: 768px) {
+  .baner-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .baner-content p {
+    font-size: 1rem;
+  }
+
+  .project-card h2 {
+    font-size: 1.5rem;
+  }
+}

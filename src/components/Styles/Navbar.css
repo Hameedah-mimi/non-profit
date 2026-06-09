@@ -1,0 +1,41 @@
+.custom-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #ddd;
+  padding: 15px 30px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+.logo {
+  width: 220px;
+  height: auto;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin-left: auto;
+}
+
+.links a {
+  text-decoration: none;
+  color: #000;
+}
+
+.Bars {
+  display: none;
+}
+
+.mobile-nav {
+  display: none;
+}

@@ -1,0 +1,76 @@
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+.contact-section .container {
+  z-index: 2;
+}
+.contact-info {
+  background: rgba(255, 255, 255, 0.356);
+  backdrop-filter: blur(5px);
+  border-radius: 15px;
+}
+
+.contact-form {
+  background: #dddddd86;
+  border-radius: 15px;
+}
+
+.contact-btn {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  background: #222;
+  color: white;
+  font-weight: 600;
+  transition: 0.3s ease;
+  margin-top: 10px;
+}
+
+.contact-btn:hover {
+  background: #2b2a2ace;
+}
+
+.closing-note {
+  background: rgba(255, 255, 255, 0.12);
+  padding: 20px;
+  border-radius: 15px;
+  backdrop-filter: blur(8px);
+}
+.contact-title {
+  font-size: 3.2rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+  color: white;
+  letter-spacing: -1px;
+}
+
+.contact-subtitle {
+  max-width: 680px;
+  margin: auto;
+  font-size: 1.15rem;
+  color: white;
+  line-height: 1.9;
+  font-weight: 400;
+}
+
+@media (max-width: 600px) {
+  .contact-overlay {
+    padding: 55px 15px 25px;
+  }
+
+  .contact-title {
+    font-size: 2.3rem;
+  }
+
+  .contact-subtitle {
+    font-size: 1rem;
+  }
+
+  .info-box,
+  .form-box {
+    padding: 25px;
+  }
+}
