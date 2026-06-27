@@ -2,40 +2,74 @@
   position: sticky;
   top: 0;
   z-index: 1000;
-  background-color: #ddd;
-  padding: 15px 30px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
 
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-weight: 700;
-  font-size: 1.3rem;
+  background: white;
+  padding: 14px 0;
+
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
 }
 
 .logo {
-  width: 220px;
-  height: auto;
+  width: 180px;
+  max-width: 100%;
 }
 
-.links {
+/* Desktop Links */
+
+.nav-links {
   display: flex;
   align-items: center;
-  gap: 25px;
-  margin-left: auto;
+  gap: 20px;
 }
 
-.links a {
+.nav-item {
   text-decoration: none;
-  color: #000;
+  color: #222;
+  font-size: 16px;
+  font-weight: 500;
+
+  transition: 0.3s;
 }
 
-.Bars {
-  display: none;
+.nav-item:hover {
+  color: #0d6efd;
 }
 
-.mobile-nav {
-  display: none;
+.nav-item.active {
+  color: #0d6efd;
+  font-weight: 700;
+}
+
+/* Toggle Button */
+
+.navbar-toggler {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.navbar-toggler svg {
+  font-size: 26px;
+}
+
+/* Mobile */
+
+@media (max-width: 991px) {
+  .nav-links {
+    margin-top: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 15px;
+  }
+
+  .nav-item {
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .logo {
+    width: 150px;
+  }
 }

@@ -2,60 +2,53 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { NavLink } from "react-router-dom";
-import { FaBars } from "react-icons/fa";
 import { useState } from "react";
+import { FaBars } from "react-icons/fa";
+
 import logo2 from "../assets/logo2.png";
 import "./Styles/Navbar.css";
 
 function CustomNavbar() {
-  const [showNav, setShowNav] = useState(false);
+  const [expanded, setExpanded] = useState(false);
+
+  const navItems = [
+    { path: "/", label: "Home" },
+    { path: "/about", label: "About Us" },
+    { path: "/projects", label: "Our Projects" },
+    { path: "/involved", label: "Get Involved" },
+    { path: "/events", label: "Events" },
+    { path: "/donate", label: "Donate Now" },
+    { path: "/contact", label: "Contact" },
+  ];
 
   return (
-    <Navbar expand="lg" className="custom-navbar">
+    <Navbar expand="lg" expanded={expanded} className="custom-navbar">
       <Container>
-        <Navbar.Brand className="brand d-flex align-items-center">
+        <Navbar.Brand as={NavLink} to="/">
           <img src={logo2} alt="UnittyBridge Foundation" className="logo" />
         </Navbar.Brand>
 
-        <Nav className="links">
-          <NavLink to="/">Home</NavLink>
-          <NavLink to="/about">About Us</NavLink>
-          <NavLink to="/projects">Our Projects</NavLink>
-          <NavLink to="/Involved">Get Involved</NavLink>
-          <NavLink to="/events">Events</NavLink>
-          <NavLink to="/donate">Donate Now</NavLink>
-          <NavLink to="/contact">Contact</NavLink>
-        </Nav>
+        <Navbar.Toggle
+          aria-controls="main-navbar"
+          onClick={() => setExpanded(!expanded)}
+        >
+          <FaBars />
+        </Navbar.Toggle>
 
-        <FaBars className="Bars" onClick={() => setShowNav(!showNav)} />
-
-        {showNav && (
-          <div className="mobile-nav">
-            <ul>
-              <li>
-                <NavLink to="/">Home</NavLink>
-              </li>
-              <li>
-                <NavLink to="/about">About Us</NavLink>
-              </li>
-              <li>
-                <NavLink to="/projects">Our Projects</NavLink>
-              </li>
-              <li>
-                <NavLink to="/involve">Get Invovelved</NavLink>
-              </li>
-              <li>
-                <NavLink to="/events">Events</NavLink>
-              </li>
-              <li>
-                <NavLink to="/donate">Donate Now</NavLink>
-              </li>
-              <li>
-                <NavLink to="/contact">Contact</NavLink>
-              </li>
-            </ul>
-          </div>
-        )}
+        <Navbar.Collapse id="main-navbar">
+          <Nav className="ms-auto nav-links">
+            {navItems.map((item) => (
+              <NavLink
+                key={item.path}
+                to={item.path}
+                className="nav-item"
+                onClick={() => setExpanded(false)}
+              >
+                {item.label}
+              </NavLink>
+            ))}
+          </Nav>
+        </Navbar.Collapse>
       </Container>
     </Navbar>
   );
