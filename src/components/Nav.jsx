@@ -6,7 +6,7 @@ import { useState } from "react";
 import { FaBars } from "react-icons/fa";
 
 import logo2 from "../assets/logo2.png";
-import "./Styles/Navbar.css";
+import "../Styles/Navbar.css";
 
 function CustomNavbar() {
   const [expanded, setExpanded] = useState(false);

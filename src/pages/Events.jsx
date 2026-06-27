@@ -8,7 +8,7 @@ import medic from "../assets/medical-help.png";
 import health from "../assets/health-outreach.png";
 import "react-calendar/dist/Calendar.css";
 import EventCard from "../components/EventCard";
-import "./Styles/Event.css";
+import "./Event.css";
 
 const upcomingEvents = [
   {

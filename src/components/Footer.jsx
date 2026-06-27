@@ -15,7 +15,7 @@ import {
 } from "react-icons/fa6";
 
 import logo from "../assets/logo2.png";
-import "./styles/Footer.css";
+import "../Styles/Footer.css";
 
 function Footer() {
   const quickLinks = [
